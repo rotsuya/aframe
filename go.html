@@ -173,14 +173,6 @@
         //startMediaAndJoinRoom();
       }
     });
-
-  var video = document.querySelector('#video1');
-  var msg = document.querySelector('#msg');
-
-  video.addEventListener('playing', function () {
-    var currentSource = video.querySelector('[src="' + video.currentSrc + '"]');
-    msg.setAttribute('text', 'value', '');
-  });
   </script>
 </head>
 
@@ -208,7 +200,13 @@
 
   </a-scene>
 </body>
-<script type="text/javascript">
-  //joinRoom();
+<script>
+  var video = document.querySelector('#video1');
+  var msg = document.querySelector('#msg');
+
+  video.addEventListener('playing', function () {
+    var currentSource = video.querySelector('[src="' + video.currentSrc + '"]');
+    msg.setAttribute('text', 'value', '');
+  });
 </script>
 </html>
